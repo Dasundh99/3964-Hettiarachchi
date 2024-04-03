@@ -1,18 +1,18 @@
-import '../styles.css';
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function AddGame() {
+export default function UpdateGame() {
   const [GameTitle, setGameTitle] = useState("");
   const [GameGenre, setGameGenre] = useState("");
   const [RAM, setRAM] = useState("");
   const [GPU, setGPU] = useState("");
   const [ROM, setROM] = useState("");
+  const [gameId, setGameId] = useState(""); // Add a state variable to store the game ID you want to update
 
-  function sendData(e) {
+  function updateData(e) {
     e.preventDefault();
 
-    const newGame = {
+    const updatedGame = {
       GameTitle,
       GameGenre,
       RAM,
@@ -21,14 +21,15 @@ export default function AddGame() {
     };
 
     axios
-      .post("http://localhost:8070/Game/add", newGame)
-      .then(() => {
-        alert("Game Added");
+      .put(`http://localhost:8070/Game/update/${gameId}`, updatedGame) // Use the correct API endpoint with the game ID
+      .then((response) => {
+        alert("Game Updated");
         setGameTitle("");
         setGameGenre("");
         setRAM("");
         setGPU("");
         setROM("");
+        setGameId("");
         window.location.reload()
       })
       .catch((err) => {
@@ -38,39 +39,19 @@ export default function AddGame() {
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
-      <form onSubmit={sendData}>
-        <div className="mb-3">
-          
-          <input
-            type="text"
-            placeholder='Game Title'
-            className="form-control"
-            onChange={(e) => {
-              setGameTitle(e.target.value);
-            }}
-          />
-        </div>
-
-        <div className="mb-3">
-        
-          <input
-            type="text"
-            className="form-control"
-            placeholder='Game Genre'
-            onChange={(e) => {
-              setGameGenre(e.target.value);
-            }}
-          />
-        </div>
-
-        <div className="mb-3">
       
+      
+      <form onSubmit={updateData}>
+      
+        <div className="mb-3">
+    
           <input
+
             type="text"
-            placeholder='RAM'
+            placeholder="Game ID"
             className="form-control"
             onChange={(e) => {
-              setRAM(e.target.value);
+              setGameId(e.target.value);
             }}
           />
         </div>
@@ -79,10 +60,34 @@ export default function AddGame() {
      
           <input
             type="text"
+            placeholder="Game Title"
             className="form-control"
-            placeholder='GPU'
             onChange={(e) => {
-              setGPU(e.target.value);
+              setGameTitle(e.target.value);
+            }}
+          />
+        </div>
+
+        <div className="mb-3">
+    
+          <input
+            type="text"
+            placeholder="Game Genre"
+            className="form-control"
+            onChange={(e) => {
+              setGameGenre(e.target.value);
+            }}
+          />
+        </div>
+
+        <div className="mb-3">
+    
+          <input
+            type="text"
+            placeholder="RAM"
+            className="form-control"
+            onChange={(e) => {
+              setRAM(e.target.value);
             }}
           />
         </div>
@@ -92,7 +97,20 @@ export default function AddGame() {
           <input
             type="text"
             className="form-control"
-            placeholder='ROM'
+            placeholder="GPU"
+            onChange={(e) => {
+              setGPU(e.target.value);
+            }}
+          />
+        </div>
+
+        <div className="mb-3">
+
+          <input
+
+            type="text"
+            placeholder="ROM"
+            className="form-control"
             onChange={(e) => {
               setROM(e.target.value);
             }}
@@ -100,7 +118,7 @@ export default function AddGame() {
         </div>
 
         <button type="submit" className="btn btn-primary">
-          Submit
+          Update
         </button>
       </form>
     </div>

@@ -28,25 +28,26 @@ export default function Header() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink to="/gamelist" exact className="nav-link" activeClassName="active">
+                Game List
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink to="/search" exact className="nav-link" activeClassName="active">
                 Search
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/add" className="nav-link" activeClassName="active">
+              <NavLink to="/signup" className="nav-link" activeClassName="active">
                 Sign Up
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/login" className="nav-link" activeClassName="active">
-                Sign In
+                Admin Login
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to="/addgame" className="nav-link" activeClassName="active">
-                Add Game
-              </NavLink>
-            </li>
+            
             <li className="nav-item">
               <NavLink to="/about" className="nav-link" activeClassName="active">
                 About

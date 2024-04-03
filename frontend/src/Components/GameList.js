@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -9,8 +8,7 @@ export default function GameList() {
     axios
       .get("http://localhost:8070/Game")
       .then((response) => {
-        // Use slice to get only the first 5 games
-        setGames(response.data.slice(0, 4));
+        setGames(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -19,13 +17,15 @@ export default function GameList() {
 
   return (
     <div className="game-list">
-      <h2>
-        Unleash Your Gaming Skills! Your Ultimate Destination for Cutting-Edge Games
-      </h2>
-      <h3>Top 4 Games Today!</h3>
+      <div>
+      <h2>Games Available!</h2>
+      </div>
+      
       <ul>
+        
         {games.map((game) => (
           <li key={game._id}>
+            <strong>ID:</strong> {game._id}<br />
             <strong>Title:</strong> {game.GameTitle}<br />
             <strong>Genre:</strong> {game.GameGenre}<br />
             <strong>RAM:</strong> {game.RAM}<br />

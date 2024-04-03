@@ -39,11 +39,10 @@ export default function AddUser() {
           <h2>Welcome Mate!</h2>
           <form onSubmit={sendData}>
             <div className="mb-3">
-              <label htmlFor="Username" className="form-label">
-                Username
-              </label>
+
               <input
                 type="text"
+                placeholder='Username'
                 className="form-control"
                 onChange={(e) => {
                   setUsername(e.target.value);
@@ -52,11 +51,10 @@ export default function AddUser() {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email address
-              </label>
+
               <input
                 type="email"
+                placeholder='Email'
                 className="form-control"
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -65,11 +63,11 @@ export default function AddUser() {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="exampleInputPassword1" className="form-label">
-                Password
-              </label>
+
               <input
+
                 type="password"
+                placeholder='Password'
                 className="form-control"
                 onChange={(e) => {
                   setPassword(e.target.value);
@@ -78,11 +76,10 @@ export default function AddUser() {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="rolename" className="form-label">
-                Role
-              </label>
+    
               <input
                 type="text"
+                
                 className="form-control"
                 placeholder='User/Admin'
                 onChange={(e) => {

@@ -88,4 +88,22 @@ router.route("/get/:id").get(async (req, res) => {
         });
 });
 
+// Search games by title
+router.get('/search', async (req, res) => {
+  const { GameTitle } = req.query;
+
+  try {
+    const regex = new RegExp(GameTitle, 'i'); // Case-insensitive regex pattern for search
+    const games = await Game.find({ GameTitle: regex }); // Find games with matching title
+
+    res.status(200).json(games);
+  } catch (error) {
+    console.error('Error during search:', error);
+    res.status(500).json({ error: 'Error with search' });
+  }
+});
+
+module.exports = router;
+
+
 module.exports = router;

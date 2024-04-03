@@ -4,6 +4,14 @@ const bcrypt = require("bcrypt");
 const router = require("express").Router();
 const User = require("../models/User");
 
+const express = require('express');
+const cors = require('cors');
+
+const app = express();
+app.use(cors());
+
+
+
 router.route("/add").post((req, res) => {
     const Username = req.body.Username;
     const Email = req.body.Email;
@@ -85,34 +93,29 @@ router.route("/get/:id").get(async (req, res)=> {
             res.status(500).send({ status: "Error with get user", error: err.message });
         });
 });
-
-
-
-router.route("/login").post(async (req, res) => {
-  try {
-    const { Email, Password } = req.body;
-
-    const user = await User.findOne({ Email });
-
-    if (!user) {
-      return res.status(404).json({ error: "User not found" });
+router.route('/login').post(async (req, res) => {
+    try {
+      const { email, password } = req.body;
+  
+      const user = await User.findOne({ Email: email }); 
+  
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+  
+      const passwordMatch = await bcrypt.compare(password, user.Password);
+  
+      if (!passwordMatch) {
+        return res.status(401).json({ error: 'Invalid email or password' });
+      }
+  
+      res.status(200).json({ status: 'Login successful' });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ status: 'Error with login', error: err.message });
     }
-
-    const passwordMatch = await bcrypt.compare(Password, user.Password);
-
-    if (!passwordMatch) {
-      return res.status(401).json({ error: "Invalid email or password" });
-    }
-
-    const token = jwt.sign({ userId: user._id, Email: user.Email }, "your-secret-key", {
-      expiresIn: "1h",
-    });
-
-    res.status(200).json({ status: "Login successful", token });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json({ status: "Error with login", error: err.message });
-  }
 });
+
+
 
 module.exports = router;

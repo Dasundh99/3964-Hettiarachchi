@@ -1,20 +1,13 @@
-
-
-
 /* Style the heading */
 .discoverNext h1 {
   text-align: center;
   font-size: 36px;
-  color: #333; 
+  color: #ffffff; 
   margin: 30px 0; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
   font-weight: bold;
 }
 
-
-
-  
-  
   .game-item {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
@@ -32,41 +25,8 @@
     border-block-start: 1px solid #ccc;
     margin: 10px 0;
   }
-  
 
 
-  
-
-  .form-label[for="GameTitle"] {
-    color: #000000; 
-  }
-  
-  .form-label[for="GameGenre"] {
-    color: #000000;
-  }
-  
-  .form-label[for="RAM"] {
-    color: #000000; 
-  }
-  
-  .form-label[for="GPU"] {
-    color: #000000; 
-  }
-  
-  .form-label[for="ROM"] {
-    color: #000000; 
-  }
-  .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    block-size: 90vh;
-    /*background-image: url('wallpaperflare.com_wallpaper (8).jpg');*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #ffffff; 
-  }
   /*about content*/
   h2 {
     font-size: 24px;
@@ -76,7 +36,7 @@
   
   p {
     font-size: 16px;
-    color: #000000;
+    color: #eeeeee;
     line-height: 1.6;
     margin-block-end: 15px;
 
@@ -84,28 +44,28 @@
 
   /* Header Styles */
 .navbar {
-    background-color: #54a8fc00; /* Background color for the header */
+    background-color: #54a8fc00;
   }
   
   .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #007bff; /* Brand text color */
+    color: #007bff; 
     text-decoration: none;
   }
   
   .navbar-toggler {
-    background-color: #007bff; /* Toggle button background color */
+    background-color: #007bff; 
     border: none;
   }
   
   .navbar-toggler-icon {
-    background-color: #fff; /* Icon color */
+    background-color: #ffffff00; 
   }
   
   .navbar-toggler-icon::before,
   .navbar-toggler-icon::after {
-    background-color: #fff; /* Icon lines color */
+    background-color: #fff; 
   }
   
   .nav-item {
@@ -113,14 +73,20 @@
   }
   
   .nav-link {
-    color: #333; /* Nav link text color */
+    color: #333; 
     font-weight: bold;
     text-decoration: none;
+    transition: color 0.3s; 
   }
+  
+  .nav-link:hover {
+    color: #0074d9;
+  }
+  
   
   /* Active link styling */
   .nav-link.active {
-    color: #007bff; /* Active link text color */
+    color: #007bff; 
   }
   
   /* Responsive styles */
@@ -164,7 +130,7 @@
     inline-size: 90%;
     padding: 8px;
     margin-block-end: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc00;
     border-radius: 3px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
@@ -287,13 +253,13 @@
   
   /* Form Style */
   form {
-    background-color: #f7f7f7;
+    background-color: #f7f7f700;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    inline-size: 80%; /* Adjust the width as needed */
-    max-inline-size: 400px; /* Maximum width to prevent excessive width on larger screens */
-    margin: 0 auto; /* Center the form horizontally */
+    inline-size: 80%;
+    max-inline-size: 400px; 
+    margin: 0 auto;
   }
   
   form label {
@@ -304,7 +270,7 @@
     inline-size: 100%;
     padding: 8px;
     margin-block-end: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc00;
     border-radius: 3px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
@@ -339,37 +305,40 @@
     }
   }
 
-
-
-
-
 .background-container {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0);
   padding: 20px;
   border-radius: 10px;
 }
-/* App.css */
 
 
 /* Apply animation to the h1 element */
 .discoverNext h1 {
-  animation: fadeInUp 1.5s ease-in-out;
+  animation: decentTransition 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-family: 'YourNewFont', sans-serif;
+  color: #4A90E2;
 }
 
-@keyframes fadeInUp {
-  from {
+@keyframes decentTransition {
+  0% {
     opacity: 0;
-    transform: translateY(20px);
+    font-size: 20px;
+    transform: translateX(-20px);
   }
-  to {
+  100% {
     opacity: 1;
-    transform: translateY(0);
+    font-size: 32px;
+    transform: translateX(0);
   }
 }
+
+
+
 
 .background-container h2 {
   font-size: 24px; 
-  color: #ffffff; 
+  color: #ffffff00; 
+  white-space: wrap;
 }
 
 
@@ -379,29 +348,276 @@
   
 }
 
-/* App.css */
-/*  home Style the container for the images */
-/* App.css */
-/* Style the container for the images */
-.imageContainer {
+
+/*add game and list*/ 
+.combined-page {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background: linear-gradient(to bottom, #f0f0f0, #ffffff); /* Add a subtle background gradient */
-  padding: 20px; /* Add padding for spacing */
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
 }
 
-/* Style each individual image */
-.image {
-  inline-size: 250px;
-  block-size: 250px;
-  margin: 10px;
-  background-size:cover;
-  background-position: center;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a default shadow to images */
+.left-component {
+  inline-size: 45%;
+  padding: 20px; 
+  background-color: #f9f9f900; 
 }
+
+.right-component {
+  inline-size: 45%; 
+  padding: 20px; 
+  background-color: #f9f9f900; 
+}
+
+/*home*/
+
+
+/* Apply animation to the h1 element */
+.discoverNext h1 {
+  animation: fadeInOut 5s linear infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
+
+
+/*edit content styles*/
+
+.editcontent {
+  display: flex;
+  padding: 20px;
+  background-color: #f0f0f000;
+  min-block-size: 100vh;
+}
+
+.left-up-corner-component {
+  flex: 1;
+  background-color: #e1e1e100;
+  padding: 20px;
+  margin-inline-end: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.003);
+}
+
+/* Delete Component Styles */
+.left-down-corner-component {
+  flex: 1;
+  background-color: #e1e1e100;
+  padding: 20px;
+  margin-inline-end: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+}
+/* Right Component Styles */
+.right-component {
+  flex: 2;
+  background-color: #f7f7f700;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Right Component Styles */
+.right-component {
+  flex: 2;
+  background-color: rgba(247, 247, 247, 0); 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Game List Container */
+.game-list {
+  max-block-size: 600px; 
+  overflow-y: auto; 
+  border: 1px solid #000000; 
+  padding: 20px; 
+  background-color: rgba(255, 255, 255, 0); 
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  align-items: center;
+}
+
+/* Style for individual game list items */
+.game-list li {
+  list-style: none; 
+  margin-block-end: 20px; 
+  padding: 15px; 
+  background-color: rgba(249, 249, 249, 0.637); 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect for individual game list items */
+.game-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0); 
+}
+
+
+
+/*body */
+
+body {
+  background-image: url('harpal-singh-eY9nCR7G0xw-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+/* search component styles */
+.search-container {
+  max-inline-size: 400px;
+  margin: 0 auto;
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  block-size: 100vh;
+  max-inline-size: 400px;
+  text-align: center;
+}
+
+
+h2 {
+  font-size: 24px;
+  margin-block-end: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-block-end: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: #ff0000;
+  margin-block-start: 10px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-block-end: 20px;
+}
+
+li strong {
+  font-weight: bold;
+}
+
+hr {
+  border: 0.5px solid #ccc;
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+}
+
+
+/*horizontal move*/
+.imagefive {
+  background-image: url('wallpaperflare.com_wallpaper (8).jpg');
+}
+
+.imagesix {
+  background-image: url('wallpaperflare.com_wallpaper (9).jpg');
+}
+
+.imageseven {
+  background-image: url('wallpaperflare.com_wallpaper (10).jpg');
+}
+
+.imageeight {
+  background-image: url('wallpaperflare.com_wallpaper (11).jpg');
+}
+.imagenine {
+  background-image: url('wallpaperflare.com_wallpaper (12).jpg');
+}
+@keyframes zoomAndSlideAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.horizontalMove {
+  display: flex; 
+  overflow: hidden; 
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;  
+  inline-size: 100%; 
+  justify-content: center; 
+  
+}
+
+.horizontalMove > div {
+  animation: zoomAndSlideAnimation 10s linear infinite;
+  padding: 0 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+/*  home Style the container for the images */
+
+ .imageContainer {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  background: linear-gradient(to bottom, #f0f0f000, #ffffff00);
+  padding: 20px;
+}
+
+
 
 /* Style each image with a background image */
 .imageOne {
@@ -420,69 +636,107 @@
   background-image: url('wallpaperflare4.jpg');
 }
 
+
+
+
+
 /* Hover effect for images */
-.image:hover {
+  .image:hover {
   transform: scale(1.1); 
+  white-space: nowrap;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
   cursor: pointer;
   filter: brightness(1.2); 
-}
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-items: center;
+} 
 
+
+
+.image {
+  inline-size: 260px;
+  block-size: 260px;
+  margin: 10px;
+  background-size:cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  overflow-x: auto;
+}
 
 .imageContainer .image:hover {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/*add game and list*/ 
-/* styles.css */
-.combined-page {
+/*login*/
+
+.login-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px; /* Add padding for spacing */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  block-size: 60vh;
+  background-color: #f0f0f000;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 5px; 
+  max-inline-size: 400px; 
+  margin: 0 auto; 
 }
 
-.left-component {
-  inline-size: 45%; /* Adjust the width as needed */
-  padding: 20px; /* Add padding for spacing within the component */
-  background-color: #f9f9f9; /* Set a background color for the left component */
+h2 {
+  font-size: 24px; 
+  margin-block-end: 20px; 
 }
 
-.right-component {
-  inline-size: 45%; /* Adjust the width as needed */
-  padding: 20px; /* Add padding for spacing within the component */
-  background-color: #f9f9f9; /* Set a background color for the right component */
+input {
+  inline-size:auto;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-/*home*/
-/* App.css */
-
-
-/* Apply animation to the h1 element */
-.discoverNext h1 {
-  animation: fadeInUp 2s ease-in-out; /* Add animation with a 1.5s duration */
+/* Button styles */
+button {
+  background-color: #0074d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, padding 0.3s;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px); /* Start with slight opacity and slightly below its position */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); /* End with full opacity and its original position */
-  }
+button:hover {
+  background-color: #0056b3;
+  padding: 10px;
+}
+
+/* Search result list item styles */
+.searchResultList {
+  align-items: baseline;
+  color: white;
+  font-weight: bold;
+  opacity: 100; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+.searchResultList.show {
+  opacity: 100; 
 }
 
 
 
 
-  
-  
-  
 
-
-  
-  
-  
 

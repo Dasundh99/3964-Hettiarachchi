@@ -1,9 +1,17 @@
 import React from "react";
-import AddGame from "./AddGame"; // Assuming AddGame is in a separate file
-import GameList from "./GameList"; // Assuming GameList is in a separate file
-import '../styles.css'; // Import your CSS styles
+import AddGame from "./AddGame"; 
+import GameList from "./GameList"; 
+import '../styles.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function AddGameAndList() {
+  const navigate = useNavigate();
+
+
+  const ToEditContent = () => {
+    navigate('/editcontent');
+  };
+
   return (
     <div className="combined-page">
       <div className="left-component">
@@ -12,7 +20,9 @@ export default function AddGameAndList() {
       <div className="right-component">
         <GameList />
       </div>
+      <div>
+      <button onClick={ToEditContent}>To Delete and Update</button>
+      </div>
     </div>
   );
 }
-

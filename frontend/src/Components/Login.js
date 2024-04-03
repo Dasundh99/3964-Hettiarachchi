@@ -1,48 +1,64 @@
-import React, { useState } from "react";
-import '../styles.css';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+export default function Login({ history }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const navigate = useNavigate();
 
-    console.log("Username:", username);
-    console.log("Password:", password);
+  const handleLogin = async () => {
+    
 
-    setUsername("");
-    setPassword("");
+
+    const predefinedUser = {
+      email: 'dasundhammasara9@gmail.com',
+      password: 'dasun', 
+    };
+
+    if (email === predefinedUser.email && password === predefinedUser.password) {
+      setError(null);
+      console.log('Login Successful');
+      setLoggedIn(true);
+    } else {
+      setError('Invalid email or password');
+    }
   };
 
+  const handleEditContent = () => {
+    navigate('/editcontent');
+  };
+
+  const handleAddGame = () => {
+    navigate('/addgame');
+  };
+  
+
   return (
-    <div className="login">
-      <form className="login-form" onSubmit={handleLogin}>
-        <h2>Sign In</h2>
-        <div className="mb-3">
-          <input
-            type="text"
-            className="form-control" // Add the form-control class
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+    <div className="login-container">
+      <h2>Login</h2>
+      {error && <div className="error">{error}</div>}
+      <input
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button onClick={handleLogin}>Login</button>
+      {loggedIn && (
+        <div>
+          <button onClick={handleEditContent}>Edit Content</button>
+          <button onClick={handleAddGame}>Add Game</button>
         </div>
-
-        <div className="mb-3">
-          <input
-            type="password"
-            className="form-control" // Add the form-control class
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-
-        <button type="submit" className="btn btn-primary">
-          Login
-        </button>
-      </form>
+      )}
     </div>
   );
 }
