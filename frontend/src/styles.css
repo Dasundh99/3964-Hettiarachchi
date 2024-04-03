@@ -1,0 +1,488 @@
+
+
+
+/* Style the heading */
+.discoverNext h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #333; 
+  margin: 30px 0; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  font-weight: bold;
+}
+
+
+
+  
+  
+  .game-item {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .game-item strong {
+    color: #007bff;
+  }
+  
+  hr {
+    border: none;
+    border-block-start: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+
+
+  
+
+  .form-label[for="GameTitle"] {
+    color: #000000; 
+  }
+  
+  .form-label[for="GameGenre"] {
+    color: #000000;
+  }
+  
+  .form-label[for="RAM"] {
+    color: #000000; 
+  }
+  
+  .form-label[for="GPU"] {
+    color: #000000; 
+  }
+  
+  .form-label[for="ROM"] {
+    color: #000000; 
+  }
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    block-size: 90vh;
+    /*background-image: url('wallpaperflare.com_wallpaper (8).jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #ffffff; 
+  }
+  /*about content*/
+  h2 {
+    font-size: 24px;
+    color: #56b6ff;
+    margin-block-end: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6;
+    margin-block-end: 15px;
+
+  }
+
+  /* Header Styles */
+.navbar {
+    background-color: #54a8fc00; /* Background color for the header */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff; /* Brand text color */
+    text-decoration: none;
+  }
+  
+  .navbar-toggler {
+    background-color: #007bff; /* Toggle button background color */
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff; /* Icon color */
+  }
+  
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    background-color: #fff; /* Icon lines color */
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    color: #333; /* Nav link text color */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Active link styling */
+  .nav-link.active {
+    color: #007bff; /* Active link text color */
+  }
+  
+  /* Responsive styles */
+  @media (max-inline-size: 768px) {
+    .navbar-toggler {
+      background-color: #007bff; 
+    }
+  
+    .navbar-toggler-icon {
+      background-color: #fff;
+    }
+  }
+  h3 {
+    font-size: 2.5rem; 
+    color: #007bff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .container {
+    
+    
+    text-align: center;
+    
+  }
+  
+
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-block-end: 20px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    
+    inline-size: 90%;
+    padding: 8px;
+    margin-block-end: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+
+  @media (max-inline-size: 768px) {
+    .col-md-6 {
+      inline-size: 90%;
+    }
+  }
+
+  .d-flex {
+    display: flex;
+    
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .vh-100 {
+    block-size: 100vh;
+  }
+  
+  form {
+    background-color: #f7f7f700;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    
+    inline-size: 100%;
+    padding: 8px;
+    margin-block-end: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+
+  @media (max-inline-size: 768px) {
+    form {
+        
+      inline-size: 90%;
+    }
+  }
+   Container Style 
+  .d-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    block-size: 90vh;
+    /*background-image: url('hogwarts-legacy-pc-3840x2160-10493.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .vh-100 {
+    block-size: 100vh;
+  }
+  
+  /* Form Style */
+  form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    inline-size: 80%; /* Adjust the width as needed */
+    max-inline-size: 400px; /* Maximum width to prevent excessive width on larger screens */
+    margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    inline-size: 100%;
+    padding: 8px;
+    margin-block-end: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Button Style */
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    inline-size: 100%;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+
+  @media (max-inline-size: 768px) {
+    form {
+      inline-size: 90%;
+      max-inline-size: 100%; 
+    }
+  }
+
+
+
+
+
+.background-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+/* App.css */
+
+
+/* Apply animation to the h1 element */
+.discoverNext h1 {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.background-container h2 {
+  font-size: 24px; 
+  color: #ffffff; 
+}
+
+
+.background-container p {
+  font-size: 16px; 
+  color: #000000; 
+  
+}
+
+/* App.css */
+/*  home Style the container for the images */
+/* App.css */
+/* Style the container for the images */
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient(to bottom, #f0f0f0, #ffffff); /* Add a subtle background gradient */
+  padding: 20px; /* Add padding for spacing */
+}
+
+/* Style each individual image */
+.image {
+  inline-size: 250px;
+  block-size: 250px;
+  margin: 10px;
+  background-size:cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a default shadow to images */
+}
+
+/* Style each image with a background image */
+.imageOne {
+  background-image: url('wallpaperflare1.jpg');
+}
+
+.imageTwo {
+  background-image: url('wallpaperflare2.jpg');
+}
+
+.imageThree {
+  background-image: url('wallpaperflare3.jpg');
+}
+
+.imageFour {
+  background-image: url('wallpaperflare4.jpg');
+}
+
+/* Hover effect for images */
+.image:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+  cursor: pointer;
+  filter: brightness(1.2); 
+}
+
+
+.imageContainer .image:hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/*add game and list*/ 
+/* styles.css */
+.combined-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px; /* Add padding for spacing */
+}
+
+.left-component {
+  inline-size: 45%; /* Adjust the width as needed */
+  padding: 20px; /* Add padding for spacing within the component */
+  background-color: #f9f9f9; /* Set a background color for the left component */
+}
+
+.right-component {
+  inline-size: 45%; /* Adjust the width as needed */
+  padding: 20px; /* Add padding for spacing within the component */
+  background-color: #f9f9f9; /* Set a background color for the right component */
+}
+
+/*home*/
+/* App.css */
+
+
+/* Apply animation to the h1 element */
+.discoverNext h1 {
+  animation: fadeInUp 2s ease-in-out; /* Add animation with a 1.5s duration */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start with slight opacity and slightly below its position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End with full opacity and its original position */
+  }
+}
+
+
+
+
+  
+  
+  
+
+
+  
+  
+  
+

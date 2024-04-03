@@ -1,0 +1,43 @@
+:root {
+  --primary-bg-color: #282c34;
+  --text-color: #61dafb;
+}
+
+.App {
+  text-align: center;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  min-block-size: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+
+
+.App-logo {
+  block-size: 40vmin;
+  pointer-events: none;
+  animation: spin 20s infinite linear;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: spin 20s infinite linear;
+  }
+}
+
+.App-link {
+  color: var(--text-color);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
