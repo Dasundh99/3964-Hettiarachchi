@@ -1,0 +1,29 @@
+.imageContainer {
+  display: flex;
+  flex-direction: column; /* Change the flex direction to column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 100%; /* Ensure the container takes up the full height */
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 10px;
+}
+
+.discoverNext {
+  text-align: center;
+  margin: 20px 0; /* Add margin to separate from images */
+}
+
+.horizontalImages {
+  display: flex; /* Make the first four images horizontal */
+}
+
+.horizontalMove {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
