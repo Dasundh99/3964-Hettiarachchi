@@ -13,7 +13,7 @@ services:
       context: ./BACKEND
       dockerfile: Dockerfile
     ports:
-      - "8070:8070"
+      - "5000:5000"
     depends_on:
       - mongodb
 
